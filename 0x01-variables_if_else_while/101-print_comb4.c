@@ -11,7 +11,7 @@ int main(void)
 	int num2;
 	int num3;
 
-	for (num = 0; num1 <= 9; num1++)
+	for (num = 0; num <= 9; num++)
 	{
 	for (num2 = num + 1; num2 <= 9; num2++)
 	{
@@ -22,7 +22,7 @@ int main(void)
 		putchar(',');
 		putchar(' ');
 	}
-		putchar(num1 + '0');
+		putchar(num + '0');
 		putchar(num2 + '0');
 		putchar(num3 + '0');
 	}
