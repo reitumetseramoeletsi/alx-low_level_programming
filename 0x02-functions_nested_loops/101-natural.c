@@ -2,11 +2,11 @@
 /**
  * main Printsnatural numbers
  *
- * Returns: Always 0
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int a,b;
+	int a, b;
 
 	for (a = 1; a < 1024; a++)
 	{
