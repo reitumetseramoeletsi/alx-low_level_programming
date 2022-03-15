@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main Printsnatural numbers
+ * main -  Printsnatural numbers
  *
  * Return: Always 0 (Success)
  */
