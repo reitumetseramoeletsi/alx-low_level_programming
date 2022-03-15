@@ -9,7 +9,7 @@ void print_to_98(int n)
 {
 	int i = n;
 
-	while (i < 99)
+	while (i != 98)
 	{
 		if (i <= 98)
 		{
