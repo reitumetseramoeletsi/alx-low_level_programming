@@ -8,12 +8,12 @@
 int main(void)
 {
 	int n1, n2, next ,i;
-	n1 = 0;
-	n2 = 1;
+	n1 = 1;
+	n2 = 2;
 	next = n1 + n2;
 
 	printf("%d, %d, ", n1, n2);
-	for (i = 3; i <= 50; i++)
+	for (i = 4; i <= 50; i++)
 	{
 		printf("%d, ", next);
 		n1 = n2;
