@@ -21,6 +21,6 @@ int main(void)
 		n2 = next;
 		next = n1 + n2;
 	}
-
+	printf('\n');
 	return (0);
 }
