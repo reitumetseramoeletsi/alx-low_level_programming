@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	double n1, n2, next;
+	unsigned long long int  n1, n2, next;
 	int i;
 
 	n1 = 1;
@@ -15,15 +15,15 @@ int main(void)
 	next = n1 + n2;
 	i = 3;
 
-	printf("%.0f, %.0f ", n1, n2);
+	printf("%llu, %llu ", n1, n2);
 	while (i < 98)
 	{
-		printf("%.0f, ", next);
+		printf("%llu, ", next);
 		n1 = n2;
 		n2 = next;
 		next = n1 + n2;
 		i++;
 	}
-	printf("%.0f\n", next);
+	printf("%.0fn", next);
 	return (0);
 }
