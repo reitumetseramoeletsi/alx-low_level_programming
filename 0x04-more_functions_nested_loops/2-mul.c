@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *_mul - checks for multiplies two integers
+ *mul - checks for multiplies two integers
  *
  * @a: given variable
  * @b: 2nd given variable
