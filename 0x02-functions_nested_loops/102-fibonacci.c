@@ -16,7 +16,7 @@ int main(void)
 	printf("%d, %d, ", n1, n2);
 	for (i = 4; i <= 50; i++)
 	{
-		printf("*********%d **********", i);
+		printf("**i=*%d", i);
 		printf("%d, ", next);
 		n1 = n2;
 		n2 = next;
