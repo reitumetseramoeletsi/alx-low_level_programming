@@ -21,7 +21,7 @@ int main(void)
 		n2 = next;
 		next = n1 + n2;
 		if (i == 46)
-			printf("%d %d %d ", n1, n2, n1 + n2);
+			printf("%d + %d = %d ", n1, n2, n1 + n2);
 	}
 	printf("%d\n", next);
 	return (0);
