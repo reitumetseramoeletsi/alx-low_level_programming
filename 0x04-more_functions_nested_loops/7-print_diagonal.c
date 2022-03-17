@@ -2,6 +2,7 @@
 
 /**
  * print_diagonal - prints numbers from 0-14 10x
+ * @n: size of diagonal
  */
 void print_diagonal(int n)
 {
