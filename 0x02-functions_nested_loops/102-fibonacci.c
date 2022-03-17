@@ -16,12 +16,11 @@ int main(void)
 	printf("%d, %d, ", n1, n2);
 	for (i = 4; i <= 50; i++)
 	{
-		printf("**i=*%d", i);
 		printf("%d, ", next);
 		n1 = n2;
 		n2 = next;
 		next = n1 + n2;
-		if (i == 47)
+		if (i == 46)
 			printf("%d %d %d", n1, n2, next);
 	}
 	printf("%d\n", next);
