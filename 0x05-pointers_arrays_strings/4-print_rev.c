@@ -4,7 +4,7 @@
  * print_rev - prints string in reverse
  * @str: The given string
  */
-void _puts(char *str)
+void print_rev(char *str)
 {
 	int i = 0;
 
