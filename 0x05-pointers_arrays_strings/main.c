@@ -8,14 +8,10 @@
  */
 int main(void)
 {
-	int array[5];
+	int nb;
 
-	array[0] = 98;
-	array[1] = 402;
-	array[2] = 198;
-	array[3] = 298;
-	array[4] = 1024;
-	print_array(array, 5);
+	nb = _atoi("980");
+	printf ("%d\n", nb);
 
 	return (0);
 }
