@@ -4,18 +4,33 @@
  * print_rev - prints string in reverse
  * @str: The given string
  */
-void print_rev(char *str)
+void print_rev(char *s)
 {
+	/**
 	int i = 0;
 
-	while (*(str + i) != '\0')
+	while (*(s + i) != '\0')
 	{
 		i++;
 	}
 	while (i >= 0)
 	{
-		_putchar(str[i]);
+		_putchar(s[i]);
 		--i;
 	}
+	*/
+
+	int i, j, len;
+
+	i = 0;
+
+	while (s[i] != '\0')
+		i++;
+
+	len = i;
+
+	for (j = len - 1; j >= 0; j++)
+		_putchar(s[j]);
+
       	_putchar('\n');
 }
