@@ -2,7 +2,7 @@
 
 /**
  * print_rev - prints string in reverse
- * @str: The given string
+ * @s: The given string
  */
 void print_rev(char *s)
 {
@@ -21,5 +21,5 @@ void print_rev(char *s)
 	{
 		_putchar(s[j]);
 	}
-      	_putchar('\n');
+     	_putchar('\n');
 }
