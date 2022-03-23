@@ -5,6 +5,8 @@
 * _strcpy - Copies the string
 * @dest: destination
 * @src: second arg
+*
+* Return: Poiter to dest
 */
 char *_strcpy(char *dest, char *src)
 {
@@ -16,5 +18,6 @@ char *_strcpy(char *dest, char *src)
 	for (; x < i; x++)
 		dest[x] = src[x];
 	dest[x] = '\0';
-	return(dest);
+
+	return (dest);
 }
