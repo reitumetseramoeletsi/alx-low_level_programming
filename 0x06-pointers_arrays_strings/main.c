@@ -8,11 +8,12 @@
  */
 int main(void)
 {
-	char s1[] = "Hello";
-	char s2[] = "Hellp";
+	char str[] = "Hello world is:not, I can not imagine.what is happening\n";
+	char *ptr;
 
-	printf("%d\n", _strcmp(s1, s2));
-	printf("%d\n", _strcmp(s2, s1));
-	printf("%d\n", _strcmp(s1, s1));
+	ptr = cap_string(str);
+	printf("%s", ptr);
+	printf("%s", str);
+
 	return (0);
 }
