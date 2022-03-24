@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+
 /**
  * *cap_string - caoitalise the string
  * @s: given String
@@ -20,10 +21,10 @@ char *cap_string(char *s)
 			if (s[j] == c[i] && s[j + 1] >= 97)
 			{
 				s[j + 1] = s[(j + 1) - 32];
-			}	
+			}
 		}
 		j++;
 	}
-	
+
 	return (s);
 }
