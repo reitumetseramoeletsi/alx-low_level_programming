@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * *cap_string - caoitalise the string
  * @s: given String
@@ -15,7 +15,7 @@ char *cap_string(char *s)
 
 	while (s[j] != '\0')
 	{
-		for (i = 0; i < 14; i++)
+		for (i = 0; i < 13; i++)
 		{
 			if (s[j] == c[i] && s[j + 1] >= 97)
 			{
