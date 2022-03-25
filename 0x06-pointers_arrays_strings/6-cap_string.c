@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * *cap_string - caoitalise the string
@@ -16,22 +15,22 @@ char *cap_string(char *s)
 
 	for (j = 0; s[j] != '\0'; j++)
 	{
-		switch (s[i])
+		switch (s[j])
 		{
-			case ',';
-			case ';';
-			case '.';
-			case '!';
-			case '?';
-			case '"';
-			case '(';
-			case ')';
-			case '{';
-			case '}';
-			case ' ';
-			case '\n';
-			case '\t';
-			if (s[j] == c[i] && s[j + 1] >= 97)
+			case ',':
+			case ';':
+			case '.':
+			case '!':
+			case '?':
+			case '"':
+			case '(':
+			case ')':
+			case '{':
+			case '}':
+			case ' ':
+			case '\n':
+			case '\t':
+			if (s[j + 1] > 96 && s[j + 1] < 123)
 			{
 				s[j + 1] = s[(j + 1) - 32];
 			}
