@@ -9,7 +9,6 @@
  */
 char *cap_string(char *s)
 {
-	int i;
 	int j = 0;
 
 	if (s[0] >= 'a' && s[0] <= 'z')
