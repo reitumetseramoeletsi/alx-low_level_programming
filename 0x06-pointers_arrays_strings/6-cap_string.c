@@ -32,7 +32,7 @@ char *cap_string(char *s)
 			case '\t':
 			if (s[j + 1] > 96 && s[j + 1] < 123)
 			{
-				s[j + 1] = s[(j + 1) - 32];
+				s[j + 1] = s[j + 1] - 32;
 			}
 		}
 	}
