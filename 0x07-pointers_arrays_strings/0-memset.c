@@ -2,8 +2,8 @@
 
 /**
  * *_memset - fills the first n bytes with b
- * n: the given filling bytes
- * b: The byte to fill
+ * @n: the given filling bytes
+ * @b: The byte to fill
  *
  * Return: modigied pointer to string
  */
