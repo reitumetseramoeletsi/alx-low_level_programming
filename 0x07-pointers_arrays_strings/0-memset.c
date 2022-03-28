@@ -2,6 +2,7 @@
 
 /**
  * *_memset - fills the first n bytes with b
+ * @s: Given string
  * @n: the given filling bytes
  * @b: The byte ito fill
  *
