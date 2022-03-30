@@ -1,4 +1,4 @@
-#include "main.c"
+#include "holberton.h"
 /**
  * sqtRecursive - computes square root recursively
  * @n: given number
@@ -24,14 +24,11 @@ int _sqrt_recursion(int n)
 		return (1);
 	return (sqtRecursive(n / 2, n));
 }
-
-
 /**
- * is_prime_number - determines wether a number is prime or not
+ * is_prime_number - checks if a given number is prime
  * @n: given number
- *
- * Return: squareroot if is prime and -1 if is not prime
- */
+ * Return: 1 if number is prime else 0
+ **/
 int is_prime_number(int n)
 {
 	if (n <= 1 || _sqrt_recursion(n) >= 1)
