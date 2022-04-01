@@ -1,14 +1,18 @@
+#include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 /**
- * main - prints the number of arguenments passed to it
- * @argc: arguemnet count
- * @argv: array of pointer to arguement strings
+ * main - program that prints ll arguments it receives.
+ * @argc: argument that counts argument input
+ * @argv: argument that stores the strings in an array of char* (strings)
  * Return: 0
- **/
+ */
 int main(int argc, char *argv[])
 {
-/* to suppress unused variable warning */
-	argv = argv;
-	printf("%d\n", argc - 1);
-	return (0);
+int i;
+for (i = 0; i < argc; i++)
+{
+printf("%s\n", argv[i]);
+}
+return (0);
 }
