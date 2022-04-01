@@ -1,52 +1,34 @@
-es (49 sloc)  806 Bytes
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include <ctype.h>
 /**
- * num_checker - checks if a given char is number or not
- * @a: char to be checked
- * Return: 1, if its a number, else 0
- **/
-int num_checker(char *a)
-{
-	int i, num, len;
-
-	i = 0;
-	num = 0;
-	len = strlen(a);
-	while (i < len)
-	{
-		if (a[i] < '0' || a[i] > '9')
-		{
-			return (-1);
-		}
-		else
-			num = num * 10 + (a[i] - '0');
-		i++;
-	}
-	return (num);
-}
-/**
- * main - add positive numbers
- * @argc: arguement count
- * @argv: array of pointers to arguement strings
- * Return: result of addition or 1
- **/
+ * main - program that adds positive numbers, followed by a new line
+ * @argc: argument that counts argument input
+ * @argv: argument that stores the strings in an array of char* (strings)
+ * Return: 0
+ */
 int main(int argc, char *argv[])
 {
-	int i, num, sum;
-
-	sum = 0;
-	for (i = 1; i < argc; i++)
-	{
-		num = num_checker(argv[i]);
-		if (num == -1)
-		{
-			printf("Error\n");
-			return (1);
-		}
-		sum += num;
-	}
-	printf("%d\n", sum);
-	return (0);
+int sum;
+int i;
+int val;
+sum = 0;
+if (argc < 1)
+printf("%d\n", 0);
+while (argc-- && argc > 0)
+{
+for (i = 0; argv[argc][i] != '\0'; i++)
+{
+if (!(isdigit(argv[argc][i])))
+{
+printf("Error\n");
+return (1);
+}
+}
+val = atoi(argv[argc]);
+sum += val;
+}
+printf("%d\n", sum);
+return (0);
 }
