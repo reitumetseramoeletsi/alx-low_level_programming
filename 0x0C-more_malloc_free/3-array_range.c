@@ -23,7 +23,7 @@ int *array_range(int min, int max)
 		i++;
 	}
 	ar = malloc(sizeof(int) * len);
-	
+
 	if (ar == NULL)
 		return (NULL);
 
