@@ -1,8 +1,8 @@
 #include "main.h"
 #include <stdlib.h>
 
-/**
- * *realloc - Reallocates memory
+/**i
+ * *_realloc - Reallocates memory
  * @ptr:memory allocated before
  * @old_size: size of memory allocated to ptr
  * @new_size: new size of the allocated space
@@ -19,7 +19,10 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (ptr);
 
 	if (new_size == 0 && ptr != NULL)
+	{
 		return (NULL);
+		free(ptr);
+	}
 
 	if (ptr == NULL)
 	{
