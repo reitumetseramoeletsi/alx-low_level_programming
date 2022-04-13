@@ -5,7 +5,7 @@
 /**
  * print_name - Prints a name
  * @name: The given name
- * f() - given function
+ * @f: given function
  */
 
 void print_name(char *name, void (*f)(char *))
