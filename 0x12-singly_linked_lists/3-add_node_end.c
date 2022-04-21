@@ -30,8 +30,10 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	new = malloc(sizeof(list_t));
 	if (new == NULL)
+	{
+		free(s);
 		return (NULL);
-
+	}
 	new->str = s;
 	new->len = l;
 	new->next = NULL;
