@@ -25,7 +25,7 @@ list_t *add_node(list_t **head, const char *str)
 	if (s == NULL || head == NULL)
 		return (NULL);
 
-	for (i = 0; str[i] < l; i++)
+	for (i = 0; str[i]; i++)
 	{
 		s[i] = str[i];
 	}
