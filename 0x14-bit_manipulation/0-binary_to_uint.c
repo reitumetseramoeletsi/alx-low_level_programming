@@ -1,47 +1,46 @@
 #include "main.h"
-#include <stdlib.h>
-#include <stdio.h>
-
 /**
- * binary_to_uint - converts a binary number to an unsigned int number
- * @b: The pointer to a string of 0 and 1 chars
- *
- * Return: The converted number or 0 if b is NULL or has a
- * char that is not 0 or 1
- *
+ * _stoi - converts chars to ints
+ * @c: char to convert
+ * Return: converted int
+ */
+unsigned int _stoi(char c)
+{
+	return ((unsigned int) c - '0');
+}
+/**
+ * _strlen - calculates the length of the string
+ * @s: input
+ * Return: length of string
+ */
+unsigned int _strlen(const char *s)
+{
+	unsigned int i;
+
+	for (i = 0; s[i]; i++)
+		;
+	return (i);
+}
+/**
+ * binary_to_uint - converts a string of 1's and 0's to a decimal number
+ * @b: string to convert
+ * Return: unsigned decimal number
  */
 unsigned int binary_to_uint(const char *b)
 {
-	char *ptr;
-	int i, len, pwr, num = 1;
-	unsigned int dec = 0;
+	int i;
+	unsigned int result, tmp, expo;
 
-	for (i = 0; b[i] != '\0'; i++)
-		;
-	if (b == NULL)
+	if (!b)
 		return (0);
-	len = i;
-	ptr = malloc(sizeof(char) * len - 1);
-	if (ptr == NULL)
-		return (0);
-
-	for (i = 0; i < len; i++)
-		ptr[i] = b[i];
-	for (i = 0; i < len; i++)
+	result = tmp = 0;
+	expo = 1;
+	for (i = _strlen(b) - 1; b[i]; i--, expo *= 2)
 	{
-		pwr = len - 1 - i;
-		if (ptr[i] != '0' && ptr[i] != '1')
+		if (b[i] != '0' && b[i] != '1')
 			return (0);
-
-		if (pwr == 0)
-			num = 1;
-		while (pwr > 0)
-		{
-			num = num * 2;
-			pwr--;
-		}
-		dec = dec + (ptr[i] - '0') * num;
-		num = 1;
+		tmp = _stoi(b[i]);
+		result += tmp * expo;
 	}
-	return (dec);
+	return (result);
 }
