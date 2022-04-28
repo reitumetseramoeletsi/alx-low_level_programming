@@ -23,7 +23,7 @@ unsigned int binary_to_uint(const char *b)
 	len = i - 1;
 	ptr = malloc(sizeof(char) * len);
 	if (ptr == NULL)
-		exit(0);
+		return (0);
 
 	for (i = 0; i <= len; i++)
 		ptr[i] = b[i];
