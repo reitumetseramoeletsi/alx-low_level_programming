@@ -20,7 +20,7 @@ unsigned int binary_to_uint(const char *b)
 		;
 	if (b == NULL)
 		return (0);
-	len = i;
+	len = i + 1;
 	ptr = malloc(sizeof(char) * len - 1);
 	if (ptr == NULL)
 		return (0);
