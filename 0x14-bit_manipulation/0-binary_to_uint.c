@@ -18,10 +18,11 @@ unsigned int binary_to_uint(const char *b)
 
 	for (i = 0; b[i] != 0; i++)
 		;
-
+	if (b == NULL)
+		return (0);
 	len = i - 1;
 	ptr = malloc(sizeof(char) * len);
-	if (b == NULL || ptr == NULL)
+	if (ptr == NULL)
 		return (0);
 
 	for (i = 0; i <= len; i++)
