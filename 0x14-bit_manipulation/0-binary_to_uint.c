@@ -20,16 +20,16 @@ unsigned int binary_to_uint(const char *b)
 		;
 	if (b == NULL)
 		return (0);
-	len = i - 1;
+	len = i;
 	ptr = malloc(sizeof(char) * len);
 	if (ptr == NULL)
 		return (0);
 
-	for (i = 0; i <= len; i++)
+	for (i = 0; i < len; i++)
 		ptr[i] = b[i];
-	for (i = 0; i <= len; i++)
+	for (i = 0; i < len; i++)
 	{
-		pwr = len - i;
+		pwr = len - 1 - i;
 		if (ptr[i] != '0' && ptr[i] != '1')
 			return (0);
 
