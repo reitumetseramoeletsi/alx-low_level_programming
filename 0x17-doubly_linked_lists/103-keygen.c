@@ -8,5 +8,5 @@
 
 int main()
 {
-  return (key);
+  return (0);
 }
