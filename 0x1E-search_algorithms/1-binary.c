@@ -1,56 +1,64 @@
 #include "search_algos.h"
 
-void print_array(int *array, size_t i, size_t size);
-
 /**
- * binary_search - binary search algorithm in a string
- * @array: list of elements
- * @size: size of the list
- * @value: target to search
- * Return: element index on success (-1) on fail
+ * print_array - The function that prints the array
+ * @array: The array to be printed
+ * @start: Of an array
+ * @end: Of an array
+ *
+ * Return: nothing
  */
-int binary_search(int *array, size_t size, int value)
+void print_array(int *array, size_t start, size_t end)
 {
-	size_t low = 0, high = size - 1, half = 0;
 
-	if (array == NULL || value == 0)
-		return (-1);
+	unsigned int i;
 
-	print_array(array, low, size);
-	while (low < high)
+	printf("Searching in array: ");
+	for (i = start; i < end; i++)
 	{
-		half = (low + high) / 2;
-		if (array[half] < value)
-		{
-			low = half + 1;
-			print_array(array, low, high + 1);
-		}
-		else if (array[half] > value)
-		{
-			high = half - 1;
-			print_array(array, low, high + 1);
-		}
-		else
-			return (array[half]);
+			printf("%d, ", array[i]);
 	}
-	return (-1);
+	printf("%d\n", array[end]);
 }
 
 /**
- * print_array - print all elements in an array
- * @array: list of elements
- * @i: index to init
- * @size: size of the array
+ * binary_search - The function that perfoms the search
+ * @array: The array to be searched on
+ * @size: The size of the array
+ * @value: The value to be searched
+ *
+ * Return: The indest of the first instanse or -1
  */
-void print_array(int *array, size_t i, size_t size)
+
+int binary_search(int *array, size_t size, int value)
 {
-	printf("Searching in array: ");
-	while (i < size)
+	unsigned int left = 0, right;
+	int middle;
+
+	right = size - 1;
+
+	if (array == NULL || value == 0)
+		return (-1);
+	if (size == 1)
 	{
-		if (i + 1 == size)
-			printf("%d ", array[i]);
-		else
-			printf("%d, ", array[i]);
-		i++;
-	} printf("\n");
+		return (array[left]);
+	}
+	while (right >= left)
+	{
+		if (left == 0 && right == 0)
+			return (-1);
+		print_array(array, left, right);
+		middle = (right + left) / 2;
+		if (array[middle] == value)
+			return (array[middle]);
+		else if (array[middle] < value)
+		{
+			left = middle + 1;
+		}
+		else if (array[middle] > value)
+		{
+			right = middle;
+		}
+	}
+	return (-1);
 }
